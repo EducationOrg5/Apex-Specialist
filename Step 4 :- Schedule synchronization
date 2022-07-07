@@ -1,0 +1,13 @@
+------------------------------ WarehouseSyncSchedule Class----------------------------------
+
+global with sharing class WarehouseSyncSchedule implements Schedulable{
+    global void execute(SchedulableContext ctx){
+        System.enqueueJob(new WarehouseCalloutService());
+    }
+}
+
+------------------------------After-------------------------------------------
+
+ Seacrh in Quick find box -> Apex Classes -> click Schedule Apex and Job Name = WarehouseSyncScheduleJob , Apex Class = WarehouseSyncSchedule
+ 
+ 
